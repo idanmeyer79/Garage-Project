@@ -7,10 +7,19 @@ namespace Ex03.GarageLogic
 {
     internal class Wheel
     {
-        private string m_manufacture;
-        private float m_currentTierPressure;
-        private readonly float m_maxTierPressure;
+        private string m_manufacturer;
+        public int MaxTierPressure { get; set; }
+        public int CurrentTierPressure { get; private set; }
 
+        public void Inflate(int i_pressure)
+        {
+            if (i_pressure > MaxTierPressure)
+            {
+                throw new InvalidOperationException();
+            }
+
+            CurrentTierPressure = i_pressure;
+        }
 
     }
 }

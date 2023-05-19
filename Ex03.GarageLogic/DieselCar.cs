@@ -5,10 +5,8 @@ using System.Text;
 
 namespace Ex03.GarageLogic
 {
-    internal class Truck : Vehicle
+    internal class DieselCar : Car
     {
         private DieselEngine m_engine;
-        private bool m_ContainDangerousMaterials;
-        private float m_BootVolume;
     }
 }

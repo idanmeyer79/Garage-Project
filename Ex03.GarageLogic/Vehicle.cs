@@ -5,11 +5,11 @@ using System.Text;
 
 namespace Ex03.GarageLogic
 {
-    internal class Vehicle
+    internal abstract class Vehicle
     {
-        private string m_model;
-        private string m_plateNumber;
-        private float m_energyPrecentleft;
-        private List<Wheel> m_wheels;
+        public string Model { get; set; }
+        public string PlateNumber { get; set; }
+        public float EnergyPrecentleft { get; set; }
+        public List<Wheel> Wheels { get; set; }
     }
 }
