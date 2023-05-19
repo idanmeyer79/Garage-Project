@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Ex03.GarageLogic
 {
-    internal class DieselEngine
+    internal class DieselEngine : Engine
     {
         public enum eFuelType
         {
@@ -16,9 +16,11 @@ namespace Ex03.GarageLogic
         }
 
         private eFuelType m_FuelType;
-        private float m_FuelAmount;
-        private float m_MaxFuelAmount;
 
-        private void fillTank(eFuelType i_FuelType, float i_FuelToAdd) {}
+        public void AddEnergyToEngine(float i_energyToAdd, string i_fuelType)
+        {
+            Enum.TryParse(i_fuelType, out m_FuelType); //throw an exeption if wrong parse
+            base.AddEnergyToEngine(i_energyToAdd);
+        }
     }
 }

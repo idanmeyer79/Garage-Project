@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Ex03.GarageLogic
 {
-    public abstract class Car : Vehicle
+    public class Car : Vehicle
     {
         public enum eColor
         {
@@ -25,5 +25,9 @@ namespace Ex03.GarageLogic
 
         private eColor m_Color;
         private eNumOfDoors m_NumOfDoors;
+
+        public Car(string i_type) : base(i_type)
+        {
+        }
     }
 }

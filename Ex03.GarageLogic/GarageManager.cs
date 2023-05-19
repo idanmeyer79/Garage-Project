@@ -5,10 +5,9 @@ using System.Text;
 
 namespace Ex03.GarageLogic
 {
-    internal class GarageManager
+    public class GarageManager
     {
         private Garage m_garage;
-
         public GarageManager()
         {
             m_garage = new Garage();
@@ -25,7 +24,7 @@ namespace Ex03.GarageLogic
             }
             else
             {
-                string vehicleType = PromptUserForVehicleType();
+                string vehicleType = GarageUI.GarageUI.PromptUserForVehicleType();
                 Garage.GaragedVehicle vehicleToAdd = null;
                 if (vehicleType.ToLower() == "electric car")
                 {
@@ -95,12 +94,7 @@ namespace Ex03.GarageLogic
         }
 
 
-        private string PromptUserForVehicleType()
-        {
-            Console.WriteLine("Enter the vehicle type (Car, Motorcycle, Truck, etc.): ");
-            string vehicleType = Console.ReadLine();
-            return vehicleType;
-        }
+        
 
         private Vehicle CreateNewVehicle(string vehicleType)
         {

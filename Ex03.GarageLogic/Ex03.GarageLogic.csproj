@@ -37,20 +37,17 @@
   <ItemGroup>
     <Compile Include="Car.cs" />
     <Compile Include="DieselEngine.cs" />
-    <Compile Include="DieselMotorcycle.cs" />
     <Compile Include="ElectricEngine.cs" />
-    <Compile Include="ElectricCar.cs" />
-    <Compile Include="ElectricMotorcycle.cs" />
+    <Compile Include="Engine.cs" />
     <Compile Include="Garage.cs" />
     <Compile Include="DieselCar.cs" />
     <Compile Include="GarageManager.cs" />
     <Compile Include="Motorcycle.cs" />
     <Compile Include="Truck.cs" />
+    <Compile Include="ValueOutOfRangeException.cs" />
     <Compile Include="Vehicle.cs" />
+    <Compile Include="VehicleCreator.cs" />
     <Compile Include="Wheel.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
