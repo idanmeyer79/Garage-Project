@@ -5,9 +5,9 @@ using System.Text;
 
 namespace Ex03.GarageLogic
 {
-    internal class Garage
+    public class Garage
     {
-        internal class GaragedVehicle
+        public class GaragedVehicle
         {
             public Vehicle Vehicle { get; set; }
             public string OwnerName { get; set; }

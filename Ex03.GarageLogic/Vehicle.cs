@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Ex03.GarageLogic
 {
-    internal abstract class Vehicle
+    public abstract class Vehicle
     {
         public string Model { get; set; }
         public string PlateNumber { get; set; }

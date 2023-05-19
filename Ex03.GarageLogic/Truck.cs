@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Ex03.GarageLogic
 {
-    internal class Truck : Vehicle
+    public class Truck : Vehicle
     {
         private DieselEngine m_engine;
         private bool m_ContainDangerousMaterials;

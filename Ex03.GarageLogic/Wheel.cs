@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Ex03.GarageLogic
 {
-    internal class Wheel
+    public class Wheel
     {
         private string m_manufacturer;
         public int MaxTierPressure { get; set; }
