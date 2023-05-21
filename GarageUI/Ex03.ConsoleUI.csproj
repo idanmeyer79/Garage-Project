@@ -34,11 +34,5 @@
   <ItemGroup>
     <Compile Include="GarageUI.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Ex03.GarageLogic\Ex03.GarageLogic.csproj">
-      <Project>{09e56844-05d0-48c1-aabd-be0acdb256cb}</Project>
-      <Name>Ex03.GarageLogic</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

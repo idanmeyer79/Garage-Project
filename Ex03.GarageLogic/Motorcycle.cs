@@ -7,7 +7,7 @@ namespace Ex03.GarageLogic
 {
     public class Motorcycle : Vehicle
     {
-        public enum eLicenseLevel
+        public enum eLicenseType
         {
             A1,
             A2,
@@ -15,8 +15,8 @@ namespace Ex03.GarageLogic
             B1
         }
 
-        private int m_EngineSize;
-        private eLicenseLevel m_LicenseLevel;
+        private int m_EngineCapacity;
+        private eLicenseType m_LicenseType;
 
         public Motorcycle(string i_Type) : base(i_Type)
         {

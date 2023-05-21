@@ -9,7 +9,5 @@ namespace Ex03.GarageLogic
     {
         private float m_HouersRunTimeLeft;
         private float m_MaxHouersRunTime;
-
-
     }
 }

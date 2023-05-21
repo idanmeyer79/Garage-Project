@@ -5,31 +5,78 @@ using System.Text;
 
 namespace Ex03.GarageLogic
 {
-    internal class VehicleCreator
+    public class VehicleCreator
     {
-        public Car BuildElectricCar()
+        public enum eSupportedVehicleTypes
+        {
+            ElectricCar = 1,
+            DieselCar,
+            Truck,
+            ElectricMotorcycle,
+            DieselMotorcycle
+        }
+
+        List<string> m_VehicleTypesSupportedInSystem;
+
+        public VehicleCreator()
+        {
+            m_VehicleTypesSupportedInSystem = new List<string>() { "Car", "Motorcycle", "Truck"};
+        }
+
+        public Vehicle buildVehicleByType(eSupportedVehicleTypes i_type)
+        {
+            Vehicle res;
+
+            switch (i_type)
+            {
+                case eSupportedVehicleTypes.ElectricCar:
+                    res = BuildElectricCar();
+                    break;
+                case eSupportedVehicleTypes.DieselCar:
+                    res = BuildDieselCar();
+                    break;
+                case eSupportedVehicleTypes.ElectricMotorcycle:
+                    res = BuildElectricMotorcycle();
+                    break;
+                case eSupportedVehicleTypes.DieselMotorcycle:
+                    res = BuildDieselMotorcycle();
+                    break;
+                case eSupportedVehicleTypes.Truck:
+                    res = BuildTruck();
+                    break;
+                default:
+                    res = null; 
+                    break;
+            }
+
+            return res;
+        }
+
+        public Vehicle BuildElectricCar()
         {
             return new Car("electric");
         }
 
-        public Car BuildDieselCar()
+        public Vehicle BuildDieselCar()
         {
             return new Car("diesel");
         }
 
-        public Motorcycle BuildElectricMotorcycle()
+        public Vehicle BuildElectricMotorcycle()
         {
             return new Motorcycle("electric");
         }
 
-        public Motorcycle BuildDieselMotorcycle()
+        public Vehicle BuildDieselMotorcycle()
         {
             return new Motorcycle("diesel");
         }
 
-        public Truck BuildTruck()
+        public Vehicle BuildTruck()
         {
             return new Truck();
         }
+
+
     }
 }

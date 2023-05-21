@@ -8,17 +8,17 @@ namespace Ex03.GarageLogic
     public class Wheel
     {
         private string m_manufacturer;
-        public int MaxTierPressure { get; set; }
+        public int MaxTierPressureByManufacturer { get; set; }
         public int CurrentTierPressure { get; private set; }
 
-        public void Inflate(int i_pressure)
+        public void WheelInflating(int i_AirPressureAmountToAdd)
         {
-            if (i_pressure > MaxTierPressure)
+            if (i_AirPressureAmountToAdd > MaxTierPressureByManufacturer)
             {
-                throw new InvalidOperationException();
+                throw new ValueOutOfRangeException(i_AirPressureAmountToAdd, 0, MaxTierPressureByManufacturer);
             }
 
-            CurrentTierPressure = i_pressure;
+            CurrentTierPressure = i_AirPressureAmountToAdd;
         }
 
     }

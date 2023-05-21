@@ -7,7 +7,12 @@ namespace Ex03.GarageLogic
 {
     public class Truck : Vehicle
     {
-        private bool m_ContainDangerousMaterials;
-        private float m_BootVolume;
+        public bool m_DoesContainDangerousMaterials { get; set; }
+        private float m_PayloadCapacity { get; set; }
+
+        public Truck() : base("electric")
+        {
+
+        }
     }
 }
